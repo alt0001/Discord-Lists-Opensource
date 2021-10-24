@@ -39,7 +39,6 @@ In the spirit of [free software](http://www.fsf.org/licensing/essays/free-sw.htm
  - Write, clarify or fix documentation.
  - Refactor code.
 
-More details in [CONTRIBUTING.md](../main/CONTRIBUTING.md)
 
 ## Core Team
 
