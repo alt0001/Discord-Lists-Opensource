@@ -3,6 +3,8 @@
 
 We are glad to announce the release of V6 for Discord Lists! Make sure to read the wiki for setup instructions.
 
+Please make a .env channel for the project.
+
 # _Changelog_
 
 ## **Added**
