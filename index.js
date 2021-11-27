@@ -785,6 +785,15 @@ app.post('/botedit/success/:botid', checkAuth, async function(req, res) {
   const login_logout = req.isAuthenticated()
   const text = req.body.long
   const longDesMarkdown = converter.makeHtml(text)
+  
+  const botid = await addbot.findOne({ botid: req.params.botid })
+  if (!botid) return res.redirect('/error?code=404&message=invalid bot id')
+  const owner = botid.botowner
+  
+  if (!`${req.user.username}#${req.user.discriminator}` != owner) {
+    res.redirect('/error?code=403&message=You are unauthorized to access this page')
+  }
+  
   await addbot.findOneAndUpdate(
     {
       botid: req.params.botid
